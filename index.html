@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Baile Regional de la Octava – Segunda Edición</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+/* Fondo general */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.45)
+    ),
+    url("./fondo.jpeg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Contenedor del formulario */
+.formulario {
+  background: rgba(255, 255, 255, 0.88); /* transparencia */
+  max-width: 620px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 12px;
+
+  /* Efecto elegante */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
+}
+
+/* Título */
+.formulario h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+/* Textos */
+.formulario p {
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Labels */
+.formulario label {
+  font-weight: 600;
+  margin-top: 15px;
+  display: block;
+  color: #222;
+}
+
+/* Inputs y select */
+.formulario input,
+.formulario select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+/* Botón */
+.formulario button {
+  margin-top: 25px;
+  padding: 14px;
+  border-radius: 6px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  background: #8b0000;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.formulario button:hover {
+  background: #5f0000;
+}
+
+.formulario button:disabled {
+  background: #999;
+  cursor: not-allowed;
+}
+
+/* Nota importante */
+.nota {
+  margin-top: 25px;
+  padding: 18px;
+  background: rgba(255, 243, 205, 0.95);
+  border-left: 6px solid #ffc107;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .formulario {
+    margin: 20px;
+    padding: 20px;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+<div class="formulario">
+  <h2>BAILE REGIONAL DE LA OCTAVA – SEGUNDA EDICIÓN</h2>
+
+  <p>
+    ¡Gracias por tu interés en formar parte del Baile Regional de la Octava!
+    Debido al éxito del año pasado, este año realizaremos la segunda edición y
+    queremos contar nuevamente con tu participación.
+  </p>
+
+
+  <label>Nombre y apellido del participante *</label>
+  <input id="participante" required>
+
+  <label>Nombre y apellido de la pareja *</label>
+  <input id="pareja" required>
+
+  <label>Indumentaria a utilizar *</label>
+  <select id="indumentaria"></select>
+
+  <label>Número de celular (WhatsApp) *</label>
+  <input id="telefono" required>
+
+  <button id="btn" onclick="enviar()">Enviar</button>
+
+
+  <div class="nota">
+    <strong>NOTA IMPORTANTE</strong><br><br>
+    Después de realizar esta preinscripción, el participante cuenta con una semana (7 días)
+    para realizar el anticipo y asegurar su indumentaria.<br><br>
+    De no realizar el anticipo en el tiempo establecido, la indumentaria quedará libre
+    para otro participante.<br><br>
+    Es obligatorio enviar el comprobante del anticipo al WhatsApp
+    <strong>5463-3689</strong> de la organización para confirmar su participación.
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="./logica.js"></script>
+
+</body>
+</html>
